@@ -1,0 +1,43 @@
+<html>
+<body>
+<h1>Title:District Search</h1>
+<div class = "outer">
+<form #simpleForm = "ngForm" (ngSubmit)="getvalues(simpleForm.value)">
+	<input type="text" ngModel  name="district" placeholder="Enter district name" #district = ngModel>
+	<br><br>
+	<input type="text" ngModel name="area" placeholder="Enter Area of district">
+	<br><br>
+	<input type="text" ngModel  name="population" placeholder="Enter total population">
+	<br><br>
+	<button type="submit">Save</button>
+	<div class = "inner1">
+			<label for = "bigdistrict" style="font-size:25px">Biggest District(Area Wise)</label>
+			<br>
+			<label style="font-size:20px">
+				<input type="radio" ngModel='ngForm.bigdistrict' name="bdchennai">Chennai
+			</label>
+			<label style="font-size:20px">
+				<input type="radio" ngModel='ngForm.bigdistrict' name="bdcoimbatore">Coimbatore
+			</label>
+			<label style="font-size:20px">
+				<input type="radio" ngModel='ngForm.bigdistrict' name="bdsalem">Salem
+			</label>
+	</div>
+	<br><br>
+	<div class = "inner2">
+		<label for = "bigpopulation" style="font-size:25px">Highest Population District</label>
+			<br>
+			<label style="font-size:20px">
+				<input type="radio" ngModel='ngForm.bigpopulation' name="hpchennai">Chennai
+			</label>
+			<label style="font-size:20px">
+				<input type="radio" ngModel='ngForm.bigpopulation' name="hpcoimbatore">Coimbatore
+			</label>
+			<label style="font-size:20px">
+				<input type="radio" ngModel='ngForm.bigpopulation' name="hpsalem">Salem
+			</label>
+	</div>
+</form>
+</div>
+</body>
+</html>
